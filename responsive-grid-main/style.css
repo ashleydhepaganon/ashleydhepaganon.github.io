@@ -1,0 +1,172 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* border-style: dashed; */
+    box-sizing: border-box;
+    
+    }
+    a {font-family: inherit;}
+
+  /* @media screen and (max-width: 600px) {
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 3px;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: 
+          "q"
+          "h"
+          "e"
+          "b"
+          "f";
+  }
+   */
+  /* step two - build your grid desktop and tablet grid*/
+  .container {
+      height: 100%;
+      display: grid;
+      grid-gap: 50px;
+      width: 65%;
+      margin: 0 auto;
+      /* this will be  the same for everyone */
+      grid-template-columns: repeat(2, 1fr);
+      /* this will be customized, based on your grid, use pixels or % */
+      grid-template-rows: auto;
+      /* use letters from step 1 to build the grid */
+      grid-template-areas: 
+          "n n"
+          "h s"
+          "x e"
+          "x w"
+          "f f";
+  }
+  
+  /* step three - build your mobile grid, what becomes active when the pixels are 800px or less */
+  @media screen and (max-width: 800px) {
+  
+      .container{
+          display: grid; 
+          grid-gap: 3px;
+          /* grid is only one column, keep this way */
+          grid-template-columns: 1fr;
+          /* you can enter values, or auto will adjust the box sizes based on content */
+          grid-template-rows: auto;
+          grid-template-areas:
+          "n"
+          "s"
+          "h"
+          "e"
+          "x"
+          "w"
+          "f";
+      }
+      nav{
+        grid-area: n;
+        /* position: relative; left: 700px; top: -60px; */
+        /* display: inline; */
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bolder;
+        margin-top: 30px;
+        font-size: small;
+      }
+  }
+  
+  /* step 1 - write in each of your sections and assign each of your sections a letter */
+
+  nav {
+    grid-area: n;
+    /* position: relative; left: 700px; top: -60px; */
+    /* display: inline; */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    margin-top: 30px;
+
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
+  }
+  
+  li {
+    float: left;
+    /* float: right */
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    
+    
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: rgb(131, 131, 131);
+  }
+  
+   .logo-svg {
+      grid-area: s;
+      width: 300px;
+  }
+
+
+  header {
+      grid-area: h;
+      margin-top: 0em;
+  }
+  
+  .otherexperience{
+      grid-area: w;
+      
+  }
+  
+  .education {
+      grid-area: e;
+  }
+  
+  .experience {
+      grid-area: x;
+  }
+  
+  footer{
+      grid-area: f;
+  }
+
+  body{
+      background-image: linear-gradient(to bottom right, rgb(236, 246, 248) , rgb(151, 215, 231));
+      background-attachment: fixed
+  }
+
+  h1 {
+    font-size: 300%;
+    font-weight: bold;
+}
+
+h2{
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bolder;
+    margin-bottom: 0px;
+}
+
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: large;
+  }
+
+h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: lighter;
+    
+}
